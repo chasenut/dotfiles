@@ -1,3 +1,3 @@
 ## Install
 Clone repo
-    git clone git@github.com:Cashtann/dotfiles.git ~/.dotfiles
+```git clone git@github.com:Cashtann/dotfiles.git ~/.dotfiles```
