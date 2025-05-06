@@ -8,6 +8,7 @@ git clone git@github.com:Cashtann/dotfiles.git ~/.dotfiles
 
 You may need to install some software manually (not everything is included here nor in Brewfile):
  - zsh (may be required to run some scripts)
+ - stow (required for install script)
  - tmux
  - vim
  - neovim
@@ -24,8 +25,5 @@ You may need to install some software manually (not everything is included here 
 
 I also recommend to install:
  - arandr (for i3, it's a graphical interface to adjust monitor settings. To make it work: save settings (export file) and exec it in i3 config)
-
-## TODO
-Make a script that puts every file exactly where it should be and installs some software
 
 Good luck on your new machine!
