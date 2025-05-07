@@ -26,4 +26,12 @@ You may need to install some software manually (not everything is included here 
 I also recommend to install:
  - arandr (for i3, it's a graphical interface to adjust monitor settings. To make it work: save settings (export file) and exec it in i3 config)
 
+# NeoVim
+
+For plugin manager install *packer*
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+ ```
+
 Good luck on your new machine!
