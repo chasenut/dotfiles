@@ -1,2 +1,0 @@
-require("cashtan")
-print("hello")
