@@ -1,2 +1,2 @@
+require("cashtan.lazy")
 require("cashtan.remap")
-print("hello from cashtan")
