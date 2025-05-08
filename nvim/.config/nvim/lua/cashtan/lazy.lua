@@ -35,7 +35,8 @@ local plugins = {
 	"nvim-treesitter/playground",
 	"theprimeagen/harpoon",
 	"mbbill/undotree",
-	"tpope/vim-fugitive"
+	"tpope/vim-fugitive",
+	"neovim/nvim-lspconfig",	
 }
 
 -- Setup lazy.nvim
