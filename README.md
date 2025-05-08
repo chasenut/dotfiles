@@ -53,12 +53,7 @@ sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 And then make sure this is added to your shell config `~/.bashrc` or `~/.zshrc` (in this dotfiles repo it is):
 `export PATH="$PATH:/opt/nvim-linux-x86_64/bin"`
 
-### Plugin manager for neovim
-For plugin manager install **packer**
-```
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
- ```
+
 ## TODO
 
 Make a script that automates installation of some packages
