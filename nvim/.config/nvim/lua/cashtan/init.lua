@@ -1,2 +1,2 @@
-require("cashtan.lazy")
+require("cashtan.set")
 require("cashtan.remap")
