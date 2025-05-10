@@ -29,3 +29,12 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "" --some dudes put 80 here, idk what it is
+
+vim.diagnostic.config({
+  virtual_text = {
+    update_in_insert = true,  -- show virtual text even in insert mode
+  },
+  signs = true,
+  update_in_insert = true,    -- update diagnostics while typing
+  severity_sort = true,
+})
