@@ -5,8 +5,35 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Append next line to current + cursor at the beggining (not end)
+vim.keymap.set("n", "J", "mzJ`z")
 
+-- Half page jump
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+-- When searching, cursor stays in the middle
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
+-- When pasting over something, copy buffer remains the same,
+-- normally it would be overwritten by highlighted term
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- Allows to yank to system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+-- Don't look at this
+vim.keymap.set("i", "<C-c", "<Esc>")
+
+-- Disable Q keymap
+vim.keymap.set("n", "Q", "<nop>")
+
+-- Replace all words your cursor was on
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Makes current file executable (for scripts etc.)
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Harpoon
 vim.keymap.set("n", "<leader>a", function() require("harpoon.mark").add_file() end)
