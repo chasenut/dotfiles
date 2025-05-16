@@ -30,6 +30,7 @@ You may need to install some software manually (not everything is included here 
    - feh (background wallpaper for i3)
    - picom (for terminal transparency (in i3))
    - nm-applet (network-manager_gnome for i3)
+   - polybar (status bar for i3)
  - homebrew
  - ripgrep
  - lua (5.1)
