@@ -16,6 +16,8 @@ for_window [class="^.*"] border pixel 2
 
                           # class                 border  backgr. text    indicator child_border
 for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
+client.focused                                   #4c7899 #285577 #ffffff #2e9ef4   #be33ff
+client.unfocused                                 #333333 #222222 #888888 #292d2e   #222222
 
 # kill any hanging polybar processes
 exec_always killall polybar
