@@ -16,8 +16,15 @@ for_window [class="^.*"] border pixel 2
 
                           # class                 border  backgr. text    indicator child_border
 for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
-client.focused                                   #4c7899 #285577 #ffffff #2e9ef4   #be33ff
-client.unfocused                                 #333333 #222222 #888888 #292d2e   #222222
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #2a283e #ffffff #3e8fb0   #2a283e
+client.focused_inactive #333333 #44415a #ffffff #484e50   #44415a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #f94144 #ffffff #f94144   #f94144
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
 
 # kill any hanging polybar processes
 exec_always killall polybar
@@ -50,7 +57,9 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec ghostty
+
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -249,13 +258,14 @@ workspace $ws6 output $DISP2
 assign [class="Discord"] $ws1
 assign [class="Firefox"] $ws2
 assign [class="Gnome-terminal"] $ws3
+assign [class="Ghostty"] $ws3
 assign [class="Spotify"] $ws6
 
 # launch apps
 exec --no-startup-id i3-msg "workspace $ws1; exec discord"
 exec --no-startup-id i3-msg "workspace $ws2; exec firefox"
-exec --no-startup-id i3-msg "workspace $ws3; exec i3-sensible-terminal"
-
+#exec --no-startup-id i3-msg "workspace $ws3; exec i3-sensible-terminal"
+exec --no-startup-id i3-msg "workspace $ws3; exec ghostty"
 
 exec --no-startup-id i3-msg "workspace $ws6; exec spotify"
 exec --no-startup-id i3-msg "workspace $ws1"

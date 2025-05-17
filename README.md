@@ -22,7 +22,7 @@ You may need to install some software manually (not everything is included here 
  - **vim**
  - **neovim** **(MUST BE VERSION > 0.10)**
  - **git**
- - vscode
+ - ghostty
  - build-essentials
  - i3
    - pactl (for audio in i3)
