@@ -38,6 +38,25 @@ You may need to install some software manually (not everything is included here 
  - nodejs
  - npm
 
+### Fonts
+
+This section may not be necessary.
+
+I recommend to install Nerd Fonts (e.g. `JetBrainsMonoNerdFont-Regular.ttf`)
+To install:
+
+```
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+unzip JetBrainsMono.zip 'JetBrainsMonoNerdFont-Regular.ttf'
+rm JetBrainsMono.zip
+fc-cache -fv
+```
+
+What it does? Goes to fonts directory, downloads font, extracts it, removes .zip file and registers this font (i guess)
+
+### Monitors
 
 I also recommend to install:
  - arandr (for i3, it's a graphical interface to adjust monitor settings. To make it work: save settings (export file) and exec it in i3 config)
