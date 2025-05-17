@@ -30,7 +30,7 @@ return {
                 mapping = cmp.mapping.preset.insert({
                     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-                    ['<Tab>'] = cmp.mapping(function(fallback) -- TAB can scroll completions and when aborted, TAB insets white-spaces
+                    ['<Tab>'] = cmp.mapping(function(fallback) -- TAB can scroll completions and when aborted, TAB insets white-spaces1
                         if cmp.visible() then
                             if not cmp.get_selected_entry() then
                                 -- No item selected, select the first item
