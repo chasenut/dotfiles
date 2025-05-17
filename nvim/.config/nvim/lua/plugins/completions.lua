@@ -30,8 +30,20 @@ return {
                 mapping = cmp.mapping.preset.insert({
                     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-                    ['<C-Space>'] = cmp.mapping.complete(),
-                    ['<C-e>'] = cmp.mapping.abort(),
+['<Tab>'] = cmp.mapping(function(fallback)
+                        if cmp.visible() then
+                            if not cmp.get_selected_entry() then
+                                -- No item selected, select the first item
+                                cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+                            else
+                                -- Item selected, scroll to the next item
+                                cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+                            end
+                        else
+                            -- No menu open, trigger completion
+                            cmp.complete()
+                        end
+                    end, { 'i', 's' }), -- Apply to insert and select modes                    ['<C-e>'] = cmp.mapping.abort(),
                     ['<CR>'] = cmp.mapping.confirm({ select = true }),
                 }),
                 sources = cmp.config.sources({
