@@ -1,0 +1,12 @@
+##################
+# To reload use: #
+#  Ctrl+Shift+,  #
+##################
+
+window-decoration = none
+
+font-size = 16
+
+background = #191919
+background-opacity = 0.85
+background-blur = false

@@ -15,10 +15,10 @@ set $mod Mod1
 for_window [class="^.*"] border pixel 2
 
                           # class                 border  backgr. text    indicator child_border
-for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
+for_window [class="^.*"] client.focused          #4c7899 #2a283e #ffffff #2a283e   #2a283e
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #2a283e #ffffff #3e8fb0   #2a283e
+client.focused          #4c7899 #2a283e #ffffff #2a283e   #2a283e
 client.focused_inactive #333333 #44415a #ffffff #484e50   #44415a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #f94144 #ffffff #f94144   #f94144
@@ -232,7 +232,7 @@ bindsym XF86AudioPrev exec playerctl previous
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # set wallpaper
-exec_always feh --bg-scale ~/.config/i3/wallpaper.png
+exec_always feh --bg-scale ~/.config/i3/wallpaper4.png
 
 exec --no-startup-id nm-applet
 
