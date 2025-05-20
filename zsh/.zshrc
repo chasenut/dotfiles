@@ -118,6 +118,8 @@ export NVM_DIR="$HOME/.nvm"
 # !! Contents within this block are managed by juliaup !!
 
 path=('/home/cashtan/.juliaup/bin' $path)
+export PATH="$HOME/.local/bin:$PATH"
+
 export PATH
 
 # <<< juliaup initialize <<<

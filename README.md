@@ -32,6 +32,7 @@ You may need to install some software manually (not everything is included here 
    - nm-applet (network-manager-gnome for i3, `nm-connection-editor`)
      - nmcli (reliable)
    - polybar (status bar for i3)
+ - fd-find (for grep-like commands, and to make nvim telescope work on ghostty)
  - homebrew
  - ripgrep
  - lua (5.1)
@@ -43,17 +44,7 @@ You may need to install some software manually (not everything is included here 
 
 This section may not be necessary.
 
-I recommend to install Nerd Fonts (e.g. `JetBrainsMonoNerdFont-Regular.ttf`)
-To install:
-
-```
-mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
-unzip JetBrainsMono.zip 'JetBrainsMonoNerdFont-Regular.ttf'
-rm JetBrainsMono.zip
-fc-cache -fv
-```
+For some characters to work, special font should be installed (nerd font) (e.g. `JetBrainsMonoNerdFont-Regular.ttf`)
 
 What it does? Goes to fonts directory, downloads font, extracts it, removes .zip file and registers this font (i guess)
 
