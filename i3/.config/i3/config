@@ -276,6 +276,4 @@ for_window [class="Discord"] move to workspace $ws1
 
 
 # polish keyboard layout
-exec "setxkbmap -layout us,de"
-exec "setxkbmap -option 'grp:alt_shift_toggle'"
-
+exec_always --no-startup-id sleep 5 && setxkbmap pl
