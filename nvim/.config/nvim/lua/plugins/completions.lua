@@ -39,7 +39,10 @@ return {
                     { name = 'luasnip' },
                 }, {
                         { name = 'buffer' },
-                    })
+                    }),
+                completion = {
+                    autocomplete = false, -- prevents auto-popups of comoletions menu
+                }
             })
         end,
     },
