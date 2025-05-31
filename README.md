@@ -32,6 +32,7 @@ You may need to install some software manually (not everything is included here 
    - nm-applet (network-manager-gnome for i3, `nm-connection-editor`)
      - nmcli (reliable)
    - polybar (status bar for i3)
+   - i3lock xautolock (for screen lock and blank)
  - fd-find (for grep-like commands, and to make nvim telescope work on ghostty)
  - homebrew
  - ripgrep

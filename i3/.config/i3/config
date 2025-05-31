@@ -73,10 +73,10 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -85,10 +85,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -97,7 +97,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+# NOTE: by default it is set to "h" instead of semicolon, but $mod+h is used somewhere else
+bindsym $mod+semicolon split h 
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -194,7 +195,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 exec xrandr --dpi 220
 
-exec xandr --output HDMI-0 --off --output DP-0 --primary --mode 3840x2160 --pos 3840x0 --rotate normal --output DP-1 --off --output DP-2 --mode 3840x2160 --pos 0x0 --rotate normal --output DP-3 --off --output DP-4 --off --output DP-5 --off
+#exec xandr --output HDMI-0 --off --output DP-0 --primary --mode 3840x2160 --pos 3840x0 --rotate normal --output DP-1 --off --output DP-2 --mode 3840x2160 --pos 0x0 --rotate normal --output DP-3 --off --output DP-4 --off --output DP-5 --off
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -247,6 +248,8 @@ exec --no-startup-id nm-applet
 #     DP-2
 set $DISP1 "DP-0"
 set $DISP2 "DP-2"
+
+exec --no-startup-id sleep 6 && env DISPLAY=:0 xset s 300 && xautolock -detectsleep -time 30 -locker "i3lock -i lock1.png"
 
 workspace $ws1 output $DISP2
 workspace $ws2 output $DISP1
