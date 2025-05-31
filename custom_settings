@@ -6,6 +6,7 @@
 gsettings set org.gnome.desktop.session idle-delay 1800
 gsettings set org.gnome.desktop.screensaver lock-delay 60
 
-# This is using xset (for i3wm)
-# xset s 1800   # <-- some issues with that
-
+# This if for other desktops like i3
+# Disable screensaver and set blanking to 20 minutes (1200 seconds)
+xset s 1200 1200         # screen saver delay (first is idle time, second is interval)
+xset dpms 0 0 1800       # DPMS off time = 30 min (in seconds)

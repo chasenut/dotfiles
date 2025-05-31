@@ -249,7 +249,13 @@ exec --no-startup-id nm-applet
 set $DISP1 "DP-0"
 set $DISP2 "DP-2"
 
-exec --no-startup-id sleep 6 && env DISPLAY=:0 xset s 300 && xautolock -detectsleep -time 30 -locker "i3lock -i lock1.png"
+# Blank screen after 20 minutes
+exec --no-startup-id xset s 1200 1200
+exec --no-startup-id xset dpms 0 0 1200
+
+# Logout after 30 minutes of inactivity
+exec --no-startup-id xautolock -time 30 -locker "i3-msg exit"
+
 
 workspace $ws1 output $DISP2
 workspace $ws2 output $DISP1
