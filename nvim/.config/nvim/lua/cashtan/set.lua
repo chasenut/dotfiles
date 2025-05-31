@@ -30,11 +30,15 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "100"
 
+-- For errors, warnings, etc. Shows description of ...
+vim.keymap.set('n', 'gl', vim.diagnostic.open_float, { desc = "Line diagnostics" })
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+
 vim.diagnostic.config({
-  virtual_text = {
-    update_in_insert = true,  -- show virtual text even in insert mode
-  },
+  virtual_text = false;
   signs = true,
+  underline = true,
   update_in_insert = true,    -- update diagnostics while typing
-  severity_sort = true,
+  severity_sort = false,
 })

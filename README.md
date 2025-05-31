@@ -33,6 +33,8 @@ You may need to install some software manually (not everything is included here 
      - nmcli (reliable)
    - polybar (status bar for i3)
    - i3lock xautolock (for screen lock and blank)
+   - maim (for sreenshots, i guess)
+   - xdotool (--,,--)
  - fd-find (for grep-like commands, and to make nvim telescope work on ghostty)
  - homebrew
  - ripgrep
