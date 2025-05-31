@@ -35,6 +35,7 @@ You may need to install some software manually (not everything is included here 
    - i3lock xautolock (for screen lock and blank)
    - maim (for sreenshots, i guess)
    - xdotool (--,,--)
+   - nsxiv (image viewer)
  - fd-find (for grep-like commands, and to make nvim telescope work on ghostty)
  - homebrew
  - ripgrep

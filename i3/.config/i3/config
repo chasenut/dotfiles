@@ -263,6 +263,7 @@ workspace $ws3 output $DISP1
 #workspace $ws4 output $DISP1
 #workspace $ws5 output $DISP1
 workspace $ws6 output $DISP2
+workspace $ws7 output $DISP2
 
 # assign apps to workspaces
 assign [class="Discord"] $ws1
@@ -270,6 +271,7 @@ assign [class="Firefox"] $ws2
 assign [class="Gnome-terminal"] $ws3
 assign [class="Ghostty"] $ws3
 assign [class="Spotify"] $ws6
+assign [class="^Nsxiv"] $ws7
 
 # launch apps
 exec --no-startup-id i3-msg "workspace $ws1; exec discord"
@@ -289,3 +291,5 @@ exec_always --no-startup-id sleep 5 && setxkbmap pl
 
 # screenshots for clipboard
 bindsym Ctrl+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id bash -c "maim --select /tmp/s.png && xclip -selection clipboard -t image/png -i /tmp/s.png && nsxiv -a /tmp/s.png"
+
