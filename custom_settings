@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+# This should change the screen blank time (and lock after blank)
+
+# This is for Ubuntu GNOME
+gsettings set org.gnome.desktop.session idle-delay 1800
+gsettings set org.gnome.desktop.screensaver lock-delay 60
+
+# This is using xset (for i3wm)
+# xset s 1800   # <-- some issues with that
+
