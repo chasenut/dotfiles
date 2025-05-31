@@ -286,3 +286,6 @@ for_window [class="Discord"] move to workspace $ws1
 
 # polish keyboard layout
 exec_always --no-startup-id sleep 5 && setxkbmap pl
+
+# screenshots for clipboard
+bindsym Ctrl+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
