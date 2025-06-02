@@ -254,7 +254,7 @@ exec --no-startup-id xset s 1200 1200
 exec --no-startup-id xset dpms 0 0 1200
 
 # Logout after 30 minutes of inactivity
-exec --no-startup-id xautolock -time 30 -locker "i3-msg exit"
+#exec --no-startup-id xautolock -time 30 -locker "i3-msg exit"
 
 
 workspace $ws1 output $DISP2
