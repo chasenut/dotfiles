@@ -36,6 +36,7 @@ packages=(
     make
     gcc
     clang
+    ruby
     golang-go
     rustc
     cargo
