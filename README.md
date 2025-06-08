@@ -9,7 +9,13 @@ Clone repo
 ```
 git clone git@github.com:Cashtann/dotfiles.git ~/.dotfiles
 ```
-
+### Requirements
+Install `zsh`, `stow`, `git`, `oh-my-zsh`:
+```
+sudo apt install zsh stow git
+# oh-my-zsh
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+```
 Before you run the script, you may need to have `zsh` and `stow` installed.
 1. Make `install` executable:
 ```
@@ -69,6 +75,15 @@ sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 
 And then make sure this is added to your shell config `~/.bashrc` or `~/.zshrc` (in this dotfiles repo it is):
 `export PATH="$PATH:/opt/nvim-linux-x86_64/bin"`
+
+### Mason stuff
+I don't really know which plugins require this (and how),
+but you may need to install stuff like ruby, jdk, julia etc.
+Most of them you can (and do) install with apt, but julia needs
+to be installed this way:
+```
+curl -fsSL https://install.julialang.org | sh
+```
 
 # Ghostty
 If script `install_packages` does not to this, install **Ghostty** manually:
