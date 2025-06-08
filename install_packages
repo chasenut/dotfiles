@@ -30,7 +30,6 @@ packages=(
     lua5.1
     liblua5.1-dev
     nodejs
-    npm
 )
 # Update and install
 echo "Updating package list..."
@@ -40,17 +39,17 @@ echo "Installing packages: ${packages[*]}"
 sudo apt install -y "${packages[@]}"
 
 # HOMEBREW
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # GHOSTTY
 # Download the latest AppImage package from releases
-wget https://github.com/pkgforge-dev/ghostty-appimage/releases/download/${VERSION}/Ghostty-${VERSION}-${ARCH}.AppImage
+#wget https://github.com/pkgforge-dev/ghostty-appimage/releases/download/${VERSION}/Ghostty-${VERSION}-${ARCH}.AppImage
 # Make the AppImage executable
-chmod +x Ghostty-${VERSION}-${ARCH}.AppImage
+#chmod +x Ghostty-${VERSION}-${ARCH}.AppImage
 # Run the AppImage
-./Ghostty-${VERSION}-${ARCH}.AppImage
+#./Ghostty-${VERSION}-${ARCH}.AppImage
 # Run the AppImage
-./Ghostty-${VERSION}-${ARCH}.AppImage
+#./Ghostty-${VERSION}-${ARCH}.AppImage
 
 
 # NVIM
