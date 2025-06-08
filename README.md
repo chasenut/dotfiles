@@ -12,8 +12,10 @@ git clone git@github.com:Cashtann/dotfiles.git ~/.dotfiles
 ### Requirements
 Install `zsh`, `stow`, `git`, `oh-my-zsh`:
 ```
-sudo apt install zsh stow git
-# oh-my-zsh
+sudo apt install git zsh stow
+```
+Install oh-my-zsh
+```
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
 Before you run the script, you may need to have `zsh` and `stow` installed.
@@ -23,7 +25,7 @@ chmod +x ~/.dotfiles/install
 ```
 2. Run `ubuntu` as sudo:
 ```
-sudo ~/.dotfiles/ubuntu
+zsh ~/.dotfiles/ubuntu
 ```
 3. Install oh-my-zsh, Ghostty, Neovim if needed (more instructions below)
 
