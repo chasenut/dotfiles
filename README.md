@@ -29,7 +29,8 @@ sudo ~/.dotfiles/ubuntu
 
 ### Packages
 
-You may need to install some software manually (not everything is included here nor in Brewfile):
+This are some of the packages in this dotfiles, some may be missing.
+For complete list, please read README and `install_packages`.
  - **zsh** (may be required to run some scripts)
  - **stow** (required for install script)
  - **tmux**
