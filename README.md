@@ -9,16 +9,21 @@ Clone repo
 ```
 git clone git@github.com:Cashtann/dotfiles.git ~/.dotfiles
 ```
-### Requirements
+Update packages
+```
+sudo apt update
+```
+### Required
 Install `zsh`, `stow`, `git`, `oh-my-zsh`:
 ```
 sudo apt install git zsh stow
 ```
+### Optional, but recommended
 Install oh-my-zsh
 ```
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
-Before you run the script, you may need to have `zsh` and `stow` installed.
+### Instalation process
 1. Make `install` executable:
 ```
 chmod +x ~/.dotfiles/install
@@ -27,7 +32,15 @@ chmod +x ~/.dotfiles/install
 ```
 zsh ~/.dotfiles/ubuntu
 ```
-3. Install oh-my-zsh, Ghostty, Neovim if needed (more instructions below)
+If some files are unable to be stowed, you may need to
+clear `$HOME` (~) directory of certain directories.
+It is recommended that you make a copy of them and then
+remove them (rm -rf DIR)
+3. Run `install_packages`
+```
+sudo zsh ~/.dotfiles/install_packages
+```
+Now wait, wait and wait...
 
 ### Packages
 
@@ -89,7 +102,7 @@ curl -fsSL https://install.julialang.org | sh
 ```
 
 # Ghostty
-If script `install_packages` does not to this, install **Ghostty** manually:
+If script `install_packages` does not to this, install **Ghostty** manually using `snap`:
 ```
 snap install ghostty --classic
 ```
