@@ -24,6 +24,7 @@ You may need to install some software manually (not everything is included here 
  - **git**
  - ghostty
  - build-essentials
+ - fzf
  - i3
    - pactl (for audio in i3)
    - playerctl (another pkg for i3 for audio stuff)
