@@ -32,7 +32,14 @@ packages=(
     lua5.1
     liblua5.1-dev
     nodejs
-)
+    cmake
+    make
+    gcc
+    clang
+    golang-go
+    rustc
+    cargo
+)# julia java javac npm php composer luarock cargo rust
 # Update and install
 echo "Updating package list..."
 sudo apt update

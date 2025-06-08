@@ -10,8 +10,16 @@ Clone repo
 git clone git@github.com:Cashtann/dotfiles.git ~/.dotfiles
 ```
 
-Before you run the script, make sure you have `zsh` and `stow` installed.
-Run `install` script to put all **dotfiles** in your **$HOME** directory.
+Before you run the script, you may need to have `zsh` and `stow` installed.
+1. Make `install` executable:
+```
+chmod +x ~/.dotfiles/install
+```
+2. Run `ubuntu` as sudo:
+```
+sudo ~/.dotfiles/ubuntu
+```
+3. Install oh-my-zsh, Ghostty, Neovim if needed (more instructions below)
 
 ### Packages
 
@@ -45,14 +53,6 @@ You may need to install some software manually (not everything is included here 
  - nodejs
  - npm
 
-### Fonts
-
-This section may not be necessary.
-
-For some characters to work, special font should be installed (nerd font) (e.g. `JetBrainsMonoNerdFont-Regular.ttf`)
-
-What it does? Goes to fonts directory, downloads font, extracts it, removes .zip file and registers this font (i guess)
-
 ### Monitors
 
 I also recommend to install:
@@ -70,9 +70,26 @@ sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 And then make sure this is added to your shell config `~/.bashrc` or `~/.zshrc` (in this dotfiles repo it is):
 `export PATH="$PATH:/opt/nvim-linux-x86_64/bin"`
 
+# Ghostty
+If script `install_packages` does not to this, install **Ghostty** manually:
+```
+snap install ghostty --classic
+```
+
+# Homebrew
+Same as with Ghostty, manual install:
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### Fonts
+This section may not be necessary.
+
+For some characters to work, special font should be installed (nerd font) (e.g. `JetBrainsMonoNerdFont-Regular.ttf`)
+
+What it does? Goes to fonts directory, downloads font, extracts it, removes .zip file and registers this font (i guess)
 
 ## TODO
-
-Make a script that automates installation of some packages
+Fix script to install packages
 
 Good luck on your new machine!
