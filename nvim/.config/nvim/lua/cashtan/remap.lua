@@ -43,3 +43,14 @@ vim.keymap.set("n", "<C-j>", function() require("harpoon.ui").nav_file(2) end)
 vim.keymap.set("n", "<C-k>", function() require("harpoon.ui").nav_file(3) end)
 vim.keymap.set("n", "<C-l>", function() require("harpoon.ui").nav_file(4) end)
 
+
+
+vim.keymap.set("n", "<leader>st", function()
+    local file_dir = vim.fn.expand("%:p:h")
+    vim.cmd.vnew()
+    vim.cmd("lcd " .. file_dir)
+    vim.cmd.term()
+    vim.cmd.wincmd("J")
+    vim.api.nvim_win_set_height(0, 5)
+    vim.cmd("startinsert")
+end)
