@@ -7,6 +7,9 @@ window-decoration = none
 
 font-size = 16
 
-background = #191919
+theme = rose-pine-moon
+background = #111111
 background-opacity = 0.85
 background-blur = false
+
+confirm-close-surface=false
