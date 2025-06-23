@@ -5,6 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH=$PATH:/usr/local/go/bin
 
 ZSH_THEME="robbyrussell"
 
@@ -38,3 +39,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 export PATH
 # <<< juliaup initialize <<<
+export PATH=$PATH:$HOME/go/bin
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

@@ -4,6 +4,8 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = main
 [user]
+	name = Cashtann
 	email = switalamaciej5@gmail.com
-	name = cashtann
