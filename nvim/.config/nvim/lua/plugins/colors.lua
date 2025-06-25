@@ -7,18 +7,20 @@ function ColorMyPencils(color)
 end
 
 return {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    config = function()
-        require('rose-pine').setup({
-            disable_background = true,
-            styles = {
-                italic = false,
-                bold = false,
-                transparency = true,
-            },
-        })
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        config = function()
+            require('rose-pine').setup({
+                disable_background = true,
+                styles = {
+                    italic = false,
+                    bold = false,
+                    transparency = true,
+                },
+            })
 
-        ColorMyPencils();
-    end
+            ColorMyPencils();
+        end
+    }
 }

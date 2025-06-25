@@ -1,29 +1,29 @@
 ## Before you do anything
 
-Read carefully entire README as there **may be some important information further**. 
+Read carefully entire README as there **may be some important information down the manual**. 
 
 ---
 
-# Install
-Clone repo
-```
-git clone git@github.com:Cashtann/dotfiles.git ~/.dotfiles
-```
-Update packages
+# Install Ubuntu
+Update apt
 ```
 sudo apt update
 ```
-### Required
-Install `zsh`, `stow`, `git`, `oh-my-zsh`:
+### Required packages
+Install `zsh`, `stow`, `git`:
 ```
 sudo apt install git zsh stow
 ```
-### Optional, but recommended
+### Optional, but recommended (I use it)
 Install oh-my-zsh
 ```
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
 ### Instalation process
+Clone repo
+```
+git clone git@github.com:Cashtann/dotfiles.git ~/.dotfiles
+```
 1. Make `install` executable:
 ```
 chmod +x ~/.dotfiles/install
@@ -33,16 +33,20 @@ chmod +x ~/.dotfiles/install
 zsh ~/.dotfiles/ubuntu
 ```
 If some files are unable to be stowed, you may need to
-clear `$HOME` (~) directory of certain directories.
+clear `$HOME` (~) directory of certain directories that already exist.
 It is recommended that you make a copy of them and then
 remove them (rm -rf DIR)
+
 3. Run `install_packages`
 ```
 sudo zsh ~/.dotfiles/install_packages
 ```
-Now wait, wait and wait...
+It may take a while (last time I checked around 3GB).
+
 
 ### Packages
+
+You can remove unwanted packages in **install_packages** script or later using **apt remove**.
 
 This are some of the packages in this dotfiles, some may be missing.
 For complete list, please read README and `install_packages`.
@@ -74,6 +78,12 @@ For complete list, please read README and `install_packages`.
  - python
  - nodejs
  - npm
+ - cargo
+ - composer
+ - rustc
+ - golang-go
+ - gcc
+ - make
 
 ### Monitors
 
@@ -89,7 +99,7 @@ sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 ```
 
-And then make sure this is added to your shell config `~/.bashrc` or `~/.zshrc` (in this dotfiles repo it is):
+And then make sure this is added to your shell config `~/.bashrc` or `~/.zshrc` (I use zsh):
 `export PATH="$PATH:/opt/nvim-linux-x86_64/bin"`
 
 ### Mason stuff
@@ -121,6 +131,6 @@ For some characters to work, special font should be installed (nerd font) (e.g. 
 What it does? Goes to fonts directory, downloads font, extracts it, removes .zip file and registers this font (i guess)
 
 ## TODO
-Fix script to install packages
+Fix script to install packages;
 
 Good luck on your new machine!
