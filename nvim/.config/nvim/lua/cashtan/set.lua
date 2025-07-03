@@ -28,7 +28,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "100"
+vim.opt.colorcolumn = "80"
 
 -- For errors, warnings, etc. Shows description of ...
 vim.keymap.set('n', 'gl', vim.diagnostic.open_float, { desc = "Line diagnostics" })

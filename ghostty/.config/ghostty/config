@@ -7,8 +7,10 @@ window-decoration = none
 
 font-size = 18
 
-theme = rose-pine-moon
-background = #111111
+#theme = rose-pine-moon
+theme = rose-pine
+#background = #1F1F25
+#background = #000000
 background-opacity = 0.85
 background-blur = false
 
