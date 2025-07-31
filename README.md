@@ -22,7 +22,7 @@ sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/ins
 ### Instalation process
 Clone repo
 ```
-git clone git@github.com:Cashtann/dotfiles.git ~/.dotfiles
+git clone git@github.com:chasenut/dotfiles.git ~/.dotfiles
 ```
 1. Make `install` executable:
 ```

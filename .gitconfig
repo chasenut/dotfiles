@@ -7,7 +7,7 @@
 [init]
 	defaultBranch = main
 [user]
-	name = Cashtann
 	email = switalamaciej5@gmail.com
+	name = chasenut
 [pull]
 	rebase = true
